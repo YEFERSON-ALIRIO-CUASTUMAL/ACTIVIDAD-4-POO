@@ -1,0 +1,8 @@
+
+@startuml
+
+class LeerArchivo {
+    + {static} main(args : String[]) : void
+}
+
+@enduml

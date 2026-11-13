@@ -1,0 +1,6 @@
+
+Universidad Nacional de Colombia
+Programacion Orientada a Objetos
+Actividad 4 - Ejercicio 5
+Lectura de archivos en Java
+Este programa lee un archivo de texto.

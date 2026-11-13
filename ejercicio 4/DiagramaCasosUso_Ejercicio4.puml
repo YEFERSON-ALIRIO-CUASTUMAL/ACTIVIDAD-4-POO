@@ -1,0 +1,25 @@
+
+@startuml
+left to right direction
+
+actor Usuario
+
+rectangle "Sistema de registro de equipos" {
+    usecase "Registrar equipo" as UC1
+    usecase "Ingresar datos\ndel equipo" as UC2
+    usecase "Ingresar datos\nde integrantes" as UC3
+    usecase "Validar campos" as UC4
+    usecase "Visualizar equipo\nregistrado" as UC5
+    usecase "Mostrar mensaje\nde error" as UC6
+}
+
+Usuario --> UC1
+Usuario --> UC5
+
+UC1 ..> UC2 : <<include>>
+UC1 ..> UC3 : <<include>>
+UC3 ..> UC4 : <<include>>
+
+UC6 ..> UC1 : <<extend>>
+
+@enduml

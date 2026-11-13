@@ -1,0 +1,21 @@
+
+@startuml
+
+left to right direction
+
+actor Usuario
+
+rectangle "Sistema de lectura de archivos" {
+    usecase "Ejecutar lectura\ndel archivo" as UC1
+    usecase "Leer contenido\ndel archivo" as UC2
+    usecase "Visualizar contenido\ndel archivo" as UC3
+    usecase "Mostrar mensaje\nde error" as UC4
+}
+
+Usuario --> UC1
+
+UC1 ..> UC2 : <<include>>
+UC3 ..> UC1 : <<extend>>\n[lectura exitosa]
+UC4 ..> UC1 : <<extend>>\n[error de lectura]
+
+@enduml

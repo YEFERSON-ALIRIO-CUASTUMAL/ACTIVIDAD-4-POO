@@ -1,0 +1,27 @@
+
+@startuml
+
+class Programador {
+    - nombre : String
+    - apellidos : String
+    + Programador(nombre : String, apellidos : String)
+    + imprimir() : String
+}
+
+class EquipoMaratonProgramacion {
+    - nombreEquipo : String
+    - universidad : String
+    - lenguajeProgramacion : String
+    - programadores : Programador[]
+    - cantidad : int
+    + EquipoMaratonProgramacion(nombreEquipo : String, universidad : String, lenguajeProgramacion : String, tamanoEquipo : int)
+    + equipoCompleto() : boolean
+    + agregarProgramador(programador : Programador) : void
+    + {static} validarCampo(texto : String, campo : String) : void
+    + imprimir() : String
+    + {static} main(args : String[]) : void
+}
+
+EquipoMaratonProgramacion "1" *-- "2..3" Programador : integrantes
+
+@enduml

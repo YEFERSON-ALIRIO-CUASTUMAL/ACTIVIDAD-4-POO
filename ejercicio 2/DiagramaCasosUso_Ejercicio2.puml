@@ -1,0 +1,19 @@
+
+@startuml
+left to right direction
+
+actor Usuario
+
+rectangle "Sistema de vendedores" {
+    usecase "Ingresar datos\ndel vendedor" as UC1
+    usecase "Verificar edad" as UC2
+    usecase "Visualizar datos\ndel vendedor" as UC3
+    usecase "Mostrar mensaje\nde error" as UC4
+}
+
+Usuario --> UC1
+UC1 ..> UC2 : <<include>>
+UC2 ..> UC3 : edad válida
+UC2 ..> UC4 : edad no válida
+
+@enduml

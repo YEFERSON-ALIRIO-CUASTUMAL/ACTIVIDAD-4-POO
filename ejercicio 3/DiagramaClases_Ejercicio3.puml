@@ -1,0 +1,10 @@
+
+@startuml
+
+class CalculosNumericos {
+    + {static} calcularLogaritmoNeperiano(valor : double) : double
+    + {static} calcularRaizCuadrada(valor : double) : double
+    + {static} main(args : String[]) : void
+}
+
+@enduml

@@ -1,0 +1,23 @@
+
+@startuml
+left to right direction
+
+actor Usuario
+
+rectangle "Sistema de cálculos numéricos" {
+    usecase "Ingresar número" as UC1
+    usecase "Calcular logaritmo\nneperiano" as UC2
+    usecase "Calcular raíz\ncuadrada" as UC3
+    usecase "Visualizar resultados" as UC4
+    usecase "Mostrar mensaje\nde error" as UC5
+}
+
+Usuario --> UC1
+
+UC1 ..> UC2 : <<include>>
+UC1 ..> UC3 : <<include>>
+
+Usuario --> UC4
+Usuario --> UC5
+
+@enduml

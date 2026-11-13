@@ -1,0 +1,18 @@
+@startuml
+
+class Vendedor {
+    - nombre : String
+    - apellidos : String
+    - edad : int
+    + Vendedor(nombre : String, apellidos : String)
+    + verificarEdad(edad : int) : void
+    + imprimir() : String
+}
+
+class PruebaVendedor {
+    + main(args : String[]) : void
+}
+
+PruebaVendedor ..> Vendedor
+
+@enduml
